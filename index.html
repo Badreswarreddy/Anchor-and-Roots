@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor & Roots | NRI Elder Care & Property Stewardship in Hyderabad</title>
+  <meta name="description" content="Hyderabad's trusted on-ground stewards for NRI families: background-verified elder care, geo-tagged property inspections, and concierge errands with proof of work sent to your WhatsApp.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#071f1a',
+              deep: '#0d2c25',
+              forest: '#143e35',
+              mid: '#1d5348',
+              light: '#287263',
+              gold: '#d4a359',
+              goldHover: '#c59141',
+              cream: '#fbf9f6',
+              sand: '#f4efe6'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            display: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-brand-cream text-stone-900 font-sans selection:bg-brand-gold selection:text-stone-900 antialiased">
+
+  <!-- Top Announcement Bar -->
+  <div id="announcement-bar" class="announcement-bar text-amber-200 py-2.5 px-4 text-xs font-medium transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2 truncate">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+        <span id="announcement-text" class="truncate font-sans">🌱 Welcoming new NRI families in Hyderabad — Schedule a Complimentary In-Person Care & Property Audit for Q1 2026.</span>
+      </div>
+      <div class="flex items-center space-x-4 shrink-0 pl-3">
+        <button onclick="window.app.openAuditModal()" class="text-xs font-bold text-amber-300 hover:text-white underline hidden sm:inline">Book Audit →</button>
+        <button onclick="document.getElementById('announcement-bar').classList.add('hidden')" class="text-amber-200/70 hover:text-white text-xs">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simplified Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-xs transition-all">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-11 h-11 rounded-xl overflow-hidden border border-brand-gold/40 shadow-xs group-hover:scale-105 transition-transform">
+          <img src="assets/images/logo.jpeg" alt="Anchor & Roots Logo" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight block leading-tight">Anchor & Roots</span>
+          <span class="text-[11px] font-sans font-medium text-emerald-800 tracking-wider block">Rooted in trust. Anchored in care.</span>
+        </div>
+      </a>
+
+      <!-- 4 Core Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-stone-700">
+        <a href="#how-it-works" class="hover:text-emerald-900 transition-colors">How It Works</a>
+        <a href="#services" class="hover:text-emerald-900 transition-colors">Services</a>
+        <a href="#pricing" class="hover:text-emerald-900 transition-colors">Pricing & Plans</a>
+        <a href="#calculator" class="hover:text-emerald-900 transition-colors">Cost Estimator</a>
+        <a href="#proof" class="hover:text-emerald-900 transition-colors">Proof of Work</a>
+        <a href="#coverage" class="hover:text-emerald-900 transition-colors">Coverage</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <!-- Currency Dropdown -->
+        <div class="h-10 flex items-center bg-stone-100 hover:bg-stone-200 rounded-xl px-3 border border-stone-200 text-xs font-semibold text-stone-800 transition">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-stone-500 mr-1.5 shrink-0"></i>
+          <select class="currency-selector bg-transparent outline-none cursor-pointer pr-1 font-sans">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="GBP">£ GBP</option>
+            <option value="EUR">€ EUR</option>
+            <option value="AED">AED</option>
+            <option value="CAD">CA$</option>
+            <option value="AUD">A$</option>
+          </select>
+        </div>
+
+        <!-- WhatsApp Direct -->
+        <a href="https://wa.me/919100084729" target="_blank" class="h-10 px-3.5 text-emerald-800 hover:text-emerald-950 rounded-xl hover:bg-emerald-50 border border-emerald-200/60 transition hidden md:inline-flex items-center gap-1.5 text-xs font-bold" title="WhatsApp Concierge Desk">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+          <span>WhatsApp Us</span>
+        </a>
+
+        <!-- Primary CTA -->
+        <button onclick="window.app.openAuditModal()" class="h-10 px-4 rounded-xl bg-brand-deep hover:bg-brand-mid text-amber-200 hover:text-white font-bold text-xs sm:text-sm shadow-xs transition inline-flex items-center gap-1.5">
+          <span>Book Free Audit</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center space-x-2 lg:hidden">
+        <div class="relative bg-stone-100 rounded-lg px-2 py-1 text-xs font-semibold">
+          <select class="currency-selector bg-transparent outline-none">
+            <option value="INR">₹</option>
+            <option value="USD">$</option>
+            <option value="GBP">£</option>
+            <option value="EUR">€</option>
+            <option value="AED">AED</option>
+          </select>
+        </div>
+        <button id="mobile-menu-btn" class="p-2 text-stone-700 hover:text-stone-900 rounded-lg focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex flex-col justify-end">
+    <div class="bg-white rounded-t-3xl p-6 space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-stone-200">
+        <span class="font-serif font-bold text-lg text-brand-dark">Anchor & Roots Navigation</span>
+        <button id="close-drawer-btn" class="p-2 text-stone-500 hover:text-stone-900"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex flex-col space-y-3 font-semibold text-stone-800 text-sm">
+        <a href="#how-it-works" class="p-2 hover:bg-stone-50 rounded-lg">How It Works</a>
+        <a href="#services" class="p-2 hover:bg-stone-50 rounded-lg">Our 3 Core Services</a>
+        <a href="#pricing" class="p-2 hover:bg-stone-50 rounded-lg">Care Plans & Pricing</a>
+        <a href="#calculator" class="p-2 hover:bg-stone-50 rounded-lg">Plan Cost Estimator</a>
+        <a href="#proof" class="p-2 hover:bg-stone-50 rounded-lg">Sample WhatsApp Proof</a>
+        <a href="#coverage" class="p-2 hover:bg-stone-50 rounded-lg">Hyderabad Neighborhood Coverage</a>
+        <a href="#faqs" class="p-2 hover:bg-stone-50 rounded-lg">Frequently Asked Questions</a>
+      </div>
+      <div class="pt-4 border-t border-stone-200 flex flex-col gap-3">
+        <button onclick="window.app.openAuditModal(); document.getElementById('mobile-drawer').classList.add('hidden');" class="w-full py-3 bg-brand-deep text-amber-200 font-bold rounded-xl text-center">
+          Schedule Free In-Person Audit
+        </button>
+        <a href="https://wa.me/919100084729" target="_blank" class="w-full py-2.5 bg-emerald-700 text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 text-xs">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp (+91 91000 84729)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ultra-Clean, High-Impact Hero Section -->
+  <section class="relative pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 overflow-hidden bg-gradient-to-b from-brand-sand/70 via-brand-cream to-white">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Hero Content (7 Cols) -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+          
+          <!-- Trust Badge Pill -->
+          <div class="inline-flex items-center space-x-2 px-3 sm:px-3.5 py-1.5 rounded-full trust-badge-pill text-[11px] sm:text-xs font-semibold shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span>
+            <span class="truncate">Dedicated On-Ground Family & Property Stewards in Hyderabad</span>
+          </div>
+
+          <!-- Clear, Reassuring Headline -->
+          <h1 class="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[54px] font-extrabold text-brand-dark tracking-tight leading-[1.2] sm:leading-[1.18]">
+            Your family & property in Hyderabad.<br>
+            <span class="gold-gradient-text">Cared for like our own.</span>
+          </h1>
+
+          <!-- Plain-English Subhead -->
+          <p class="text-sm sm:text-base lg:text-lg text-stone-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            We help NRI families care for aging parents, monitor vacant properties, and handle local errands with one accountable team—delivering time-stamped photo and video proof after every visit.
+          </p>
+
+          <!-- 3 Visual Trust Highlights with Equal Heights & Alignment -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+            <div class="min-h-[52px] sm:min-h-[56px] py-2 px-3 sm:py-2.5 bg-white/95 rounded-xl border border-stone-200/90 shadow-xs flex items-center space-x-2.5">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+              <span class="text-xs font-bold text-stone-800 leading-snug">Background-Verified Caregivers</span>
+            </div>
+            <div class="min-h-[52px] sm:min-h-[56px] py-2 px-3 sm:py-2.5 bg-white/95 rounded-xl border border-stone-200/90 shadow-xs flex items-center space-x-2.5">
+              <i data-lucide="map-pin" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+              <span class="text-xs font-bold text-stone-800 leading-snug">100% Geo-Tagged Photo Proof</span>
+            </div>
+            <div class="min-h-[52px] sm:min-h-[56px] py-2 px-3 sm:py-2.5 bg-white/95 rounded-xl border border-stone-200/90 shadow-xs flex items-center space-x-2.5">
+              <i data-lucide="user-check" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+              <span class="text-xs font-bold text-stone-800 leading-snug">Dedicated Hyderabad Liaison</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions Aligned to Exact Same Height -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <button onclick="window.app.openAuditModal()" class="w-full sm:w-auto h-12 px-7 rounded-xl bg-gradient-to-r from-emerald-950 to-brand-mid hover:from-emerald-900 hover:to-brand-forest text-amber-200 font-bold text-sm shadow-md hover:shadow-lg transition inline-flex items-center justify-center gap-2 group">
+              <i data-lucide="calendar" class="w-4 h-4 text-amber-300 shrink-0"></i>
+              <span>Book a Free Home Audit</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+            <a href="https://wa.me/919100084729?text=Hello%20Anchor%20%26%20Roots%2C%20I%20am%20an%20NRI%20inquiring%20about%20care%20for%20my%20family%20in%20Hyderabad." target="_blank" class="w-full sm:w-auto h-12 px-6 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-bold text-sm border border-stone-200 shadow-xs transition inline-flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Zero Obligation Sub-Note -->
+          <p class="text-xs text-stone-500 italic">
+            * Free initial on-site home audit in Hyderabad with zero payment required upfront.
+          </p>
+        </div>
+
+        <!-- Right Hero Media Card (5 Cols) -->
+        <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-stone-200 shadow-xl bg-stone-950 group">
+            
+            <!-- Video / Image Preview with Inline Player Toggle -->
+            <div id="hero-media-wrapper" class="relative aspect-hero w-full overflow-hidden bg-black">
+              <img id="hero-img-preview" src="assets/images/hero-team.jpg" alt="Anchor & Roots NRI Care in Hyderabad" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='assets/images/elder-care.jpg'">
+              
+              <!-- Inline Video Element -->
+              <video id="hero-video-player" class="w-full h-full object-cover hidden" loop playsinline controls preload="none">
+                <source src="https://video.wixstatic.com/video/d49a40_1f4860734ba94532868071f295d130dd/1080p/mp4/file.mp4" type="video/mp4">
+              </video>
+
+              <div id="hero-overlay-gradient" class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
+
+              <!-- Live Hyderabad Hub Indicator -->
+              <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-brand-deep/85 backdrop-blur-md border border-brand-gold/30 rounded-full px-3 py-1 sm:px-3.5 sm:py-1.5 flex items-center space-x-2 text-white shadow-md pointer-events-none">
+                <span class="live-dot"></span>
+                <span class="text-[11px] sm:text-xs font-semibold tracking-wide">Live Desk: Hyderabad Active</span>
+              </div>
+
+              <!-- Play Video Button Trigger -->
+              <button id="hero-play-video-btn" onclick="window.app.toggleHeroVideo()" class="absolute inset-0 m-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-gold/90 hover:bg-brand-gold text-stone-950 flex items-center justify-center shadow-2xl transition-transform hover:scale-110" title="Play Video Protocol">
+                <i data-lucide="play" class="w-6 h-6 sm:w-7 sm:h-7 fill-current ml-1 text-stone-950"></i>
+              </button>
+
+              <!-- WhatsApp Style Notification Bubble -->
+              <div id="hero-floating-bubble" class="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-2xl shadow-xl border border-stone-100 flex items-center space-x-2.5 sm:space-x-3 text-left">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
+                  <i data-lucide="check-circle" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-800"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between">
+                    <p class="text-[11px] sm:text-xs font-bold text-stone-900 truncate">Visit Completed: Banjara Hills</p>
+                    <span class="text-[9px] sm:text-[10px] text-stone-400 font-mono">11:42 AM</span>
+                  </div>
+                  <p class="text-[10px] sm:text-[11px] text-stone-600 truncate">Vitals logged: BP 124/82. 30-day Apollo medicines delivered.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Controls Bar -->
+            <div class="px-5 py-3.5 bg-brand-dark border-t border-brand-gold/20 flex items-center justify-between text-xs text-amber-200">
+              <button onclick="window.app.toggleHeroVideo()" class="inline-flex items-center gap-1.5 font-medium hover:text-white transition">
+                <i id="hero-video-icon" data-lucide="play-circle" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                <span id="hero-video-label">Watch Field Video Protocol (1080p)</span>
+              </button>
+              <button onclick="window.app.openAuditModal()" class="text-[11px] text-amber-300 hover:text-white underline font-semibold">
+                Schedule Audit ↗
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Trust Stats Counter Bar with Responsive Clean Grid Borders -->
+  <section class="bg-brand-deep text-white py-6 sm:py-8 border-y border-brand-forest/60 relative z-10">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 text-center">
+        <!-- Metric 1 -->
+        <div class="p-3.5 sm:p-4 md:p-5 border-r border-b border-brand-mid/40 md:border-b-0">
+          <div class="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-amber-300 leading-none">500+</div>
+          <div class="text-xs sm:text-sm text-stone-200 font-semibold mt-2">Field Audits Completed</div>
+          <div class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Across Hyderabad & Secunderabad</div>
+        </div>
+        <!-- Metric 2 -->
+        <div class="p-3.5 sm:p-4 md:p-5 border-b border-brand-mid/40 md:border-b-0 md:border-r">
+          <div class="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-amber-300 leading-none">12+</div>
+          <div class="text-xs sm:text-sm text-stone-200 font-semibold mt-2">Core Localities Covered</div>
+          <div class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Jubilee Hills to Tellapur</div>
+        </div>
+        <!-- Metric 3 -->
+        <div class="p-3.5 sm:p-4 md:p-5 border-r border-brand-mid/40">
+          <div class="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-amber-300 leading-none">100%</div>
+          <div class="text-xs sm:text-sm text-stone-200 font-semibold mt-2">Geo-Tagged Photo Proof</div>
+          <div class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Cryptographic GPS Timestamps</div>
+        </div>
+        <!-- Metric 4 -->
+        <div class="p-3.5 sm:p-4 md:p-5">
+          <div class="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-amber-300 leading-none">&lt; 2 Hrs</div>
+          <div class="text-xs sm:text-sm text-stone-200 font-semibold mt-2">Rapid Response SLA</div>
+          <div class="text-[10px] sm:text-[11px] text-stone-400 mt-0.5">Dedicated On-Ground Team</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works in 3 Simple Steps with Uniform Card Geometry -->
+  <section id="how-it-works" class="py-12 sm:py-16 lg:py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full">HOW IT WORKS</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">Simple, Transparent & Accountable</h2>
+        <p class="text-xs sm:text-sm lg:text-base text-stone-600">
+          No complicated vendor chains. From your first message to completed visits, here is how we serve your family.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 items-stretch">
+        
+        <!-- Step 1 -->
+        <div class="bg-brand-cream/60 rounded-3xl p-6 sm:p-7 lg:p-8 border border-stone-200/90 hover-lift transition flex flex-col justify-between h-full">
+          <div>
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl step-number-badge flex items-center justify-center font-serif text-lg sm:text-xl font-extrabold mb-4 sm:mb-5 shadow-xs shrink-0">
+              01
+            </div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-dark mb-2 min-h-[28px]">Tell Us What You Need</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5 sm:mb-6 min-h-[64px]">
+              Share details about your aging parents' medical needs, a vacant plot inspection, or local government errands via our quick web form or WhatsApp.
+            </p>
+          </div>
+          <div class="mt-auto pt-4 border-t border-stone-200/60 text-xs font-bold text-emerald-800 flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>Response within 12 hours</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-brand-cream/60 rounded-3xl p-6 sm:p-7 lg:p-8 border border-stone-200/90 hover-lift transition flex flex-col justify-between h-full">
+          <div>
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl step-number-badge flex items-center justify-center font-serif text-lg sm:text-xl font-extrabold mb-4 sm:mb-5 shadow-xs shrink-0">
+              02
+            </div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-dark mb-2 min-h-[28px]">Free On-Site Home Audit</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5 sm:mb-6 min-h-[64px]">
+              Our Hyderabad relationship coordinator conducts a complimentary in-person visit to meet your parents or survey the property with zero pressure.
+            </p>
+          </div>
+          <div class="mt-auto pt-4 border-t border-stone-200/60 text-xs font-bold text-emerald-800 flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>100% Free · Zero Commitment</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-brand-cream/60 rounded-3xl p-6 sm:p-7 lg:p-8 border border-stone-200/90 hover-lift transition flex flex-col justify-between h-full">
+          <div>
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl step-number-badge flex items-center justify-center font-serif text-lg sm:text-xl font-extrabold mb-4 sm:mb-5 shadow-xs shrink-0">
+              03
+            </div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-dark mb-2 min-h-[28px]">Stay Informed With Proof</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5 sm:mb-6 min-h-[64px]">
+              Receive live time-stamped photos, 4K walkthrough videos, health vitals charts, and caregiver audio notes directly to your family's WhatsApp group.
+            </p>
+          </div>
+          <div class="mt-auto pt-4 border-t border-stone-200/60 text-xs font-bold text-emerald-800 flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>Real-time WhatsApp Reports</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The 3 Core Services (Side-by-Side Pillars) -->
+  <section id="services" class="py-12 sm:py-16 lg:py-24 bg-brand-sand/50">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-white px-3 py-1 rounded-full shadow-xs">WHAT WE DO</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">Our 3 Core Service Pillars</h2>
+        <p class="text-xs sm:text-sm lg:text-base text-stone-600">
+          Tailored specifically for families residing thousands of miles away from Hyderabad.
+        </p>
+      </div>
+
+      <!-- Interactive Category Filter Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-8 sm:mb-10">
+        <button onclick="window.app.filterServices('all')" data-category="all" class="service-filter-btn active px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition shadow-xs bg-emerald-950 text-amber-300 border border-amber-500/50">
+          All Services (6)
+        </button>
+        <button onclick="window.app.filterServices('Elder Care')" data-category="Elder Care" class="service-filter-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold transition bg-white text-stone-700 border border-stone-200 hover:border-brand-mid">
+          👵 Elder Care & Wellness
+        </button>
+        <button onclick="window.app.filterServices('Property Watch')" data-category="Property Watch" class="service-filter-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold transition bg-white text-stone-700 border border-stone-200 hover:border-brand-mid">
+          🏡 Property & Plot Watch
+        </button>
+        <button onclick="window.app.filterServices('Shipping & Legal')" data-category="Shipping & Legal" class="service-filter-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold transition bg-white text-stone-700 border border-stone-200 hover:border-brand-mid">
+          📦 Legal & Local Errands
+        </button>
+      </div>
+
+      <!-- 3 Side-by-Side Dynamic Service Pillars -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Custom Concierge Note -->
+      <div class="mt-8 p-4 rounded-2xl bg-white border border-stone-200 text-center text-xs text-stone-600">
+        Need help with specialized services like <strong>Personalized NRI Airport Transit</strong>, <strong>Home Deep-Cleaning</strong>, or <strong>Contractor Renovations</strong>? 
+        <button onclick="window.app.openAuditModal('Custom Concierge Inquiry')" class="text-emerald-900 font-bold underline ml-1">Request custom coordination →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clean Proof of Work: What You Receive on WhatsApp -->
+  <section id="proof" class="py-12 sm:py-16 lg:py-24 bg-brand-deep text-stone-100 relative overflow-hidden">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left: Clear Explanation (6 cols) -->
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
+          <span class="text-xs font-bold tracking-widest uppercase text-amber-300 bg-white/10 px-3 py-1 rounded-full border border-amber-300/20">PROOF OF WORK</span>
+          <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            Zero Guesswork. What You Receive on Your Phone.
+          </h2>
+          <p class="text-xs sm:text-sm lg:text-base text-stone-300 leading-relaxed">
+            When you are thousands of miles away, vague phone calls aren't enough. Anchor & Roots sends time-stamped photo proof, vitals readings, and voice briefings right to your private family WhatsApp group.
+          </p>
+
+          <!-- Interactive Scenario Switcher -->
+          <div class="space-y-2 pt-2">
+            <p class="text-xs font-semibold text-amber-200/90 uppercase tracking-wider">Click to view realistic updates:</p>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <button data-scenario="elder" class="simulator-tab px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold border transition text-left flex items-center justify-between sm:justify-start gap-2 bg-emerald-950 text-amber-300 border-amber-500/50">
+                <i data-lucide="heart-pulse" class="w-4 h-4 shrink-0"></i>
+                <span>1. Elder Vitals Visit</span>
+              </button>
+              <button data-scenario="property" class="simulator-tab px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold border transition text-left flex items-center justify-between sm:justify-start gap-2 bg-stone-800 text-stone-300 border-transparent hover:bg-stone-700">
+                <i data-lucide="shield" class="w-4 h-4 shrink-0"></i>
+                <span>2. Tellapur Plot Check</span>
+              </button>
+              <button data-scenario="errand" class="simulator-tab px-3.5 sm:px-4 py-2.5 rounded-xl text-xs font-bold border transition text-left flex items-center justify-between sm:justify-start gap-2 bg-stone-800 text-stone-300 border-transparent hover:bg-stone-700">
+                <i data-lucide="file-check" class="w-4 h-4 shrink-0"></i>
+                <span>3. Sub-Registrar EC</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Proof Guarantees -->
+          <div class="space-y-2.5 pt-3 sm:pt-4 text-xs sm:text-sm text-stone-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Calibrated GPS coordinates embedded directly in each photo.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Exact timestamp and field inspector verification on every update.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="share-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Shared in a private family WhatsApp group with all siblings included.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Clean Phone Frame Mockup (6 cols) -->
+        <div class="lg:col-span-6 flex justify-center mt-6 lg:mt-0">
+          <div class="w-full max-w-[330px] sm:max-w-[380px] phone-mockup mx-auto">
+            <div class="phone-notch"></div>
+            
+            <!-- WhatsApp Chat Header -->
+            <div class="bg-[#005c4b] text-white pt-8 pb-3 px-3.5 sm:px-4 flex items-center justify-between shadow">
+              <div class="flex items-center space-x-2.5">
+                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-serif text-sm font-bold border border-white/40">
+                  AR
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold leading-tight">Anchor & Roots Liaison</h4>
+                  <p class="text-[10px] text-emerald-200">Online · Hyderabad Operations Desk</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 text-white/80">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <i data-lucide="more-vertical" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <!-- WhatsApp Chat Body -->
+            <div class="whatsapp-chat-bg p-4 space-y-3 min-h-[460px] max-h-[520px] overflow-y-auto text-stone-900">
+              
+              <div class="text-center my-1">
+                <span id="sim-time" class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-semibold text-stone-500 shadow-xs">
+                  Today 11:42 AM
+                </span>
+              </div>
+
+              <!-- Message Bubble with Photo Proof -->
+              <div class="whatsapp-bubble-in p-3 space-y-2 text-xs">
+                
+                <div class="flex items-center justify-between pb-1.5 border-b border-stone-200">
+                  <span id="sim-title" class="font-bold text-emerald-900">Elder Care & Vitals Check-in</span>
+                  <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-mono font-bold">VERIFIED</span>
+                </div>
+
+                <div class="flex items-center gap-1 text-[10px] text-stone-500 font-mono">
+                  <i data-lucide="map-pin" class="w-3 h-3 text-red-500 shrink-0"></i>
+                  <span id="sim-location" class="truncate">Road 12, Banjara Hills, Hyderabad</span>
+                </div>
+
+                <div class="relative rounded-lg overflow-hidden bg-stone-200 h-44">
+                  <img id="sim-photo" src="assets/images/elder-care.jpg" alt="Proof" class="w-full h-full object-cover">
+                  <div class="absolute bottom-1 right-2 bg-black/60 text-white px-2 py-0.5 rounded text-[9px] font-mono">
+                    GPS Certified
+                  </div>
+                </div>
+
+                <p id="sim-photo-caption" class="text-[11px] text-stone-700 italic">
+                  Auntie enjoying morning tea after vitals check and BP medicine replenishment.
+                </p>
+
+                <!-- Vitals Grid -->
+                <div id="sim-vitals-grid" class="grid grid-cols-2 gap-1.5 pt-1 text-[10px]">
+                  <!-- Injected by JS -->
+                </div>
+
+                <p id="sim-message" class="text-[11px] text-stone-800 leading-relaxed pt-1 border-t border-stone-100">
+                  Namaste Srinivas garu, we completed our wellness visit. Auntie took her 10 AM medicines. Apollo pharmacy delivered her 30-day supply.
+                </p>
+
+                <!-- Playable Audio Voice Briefing -->
+                <div id="sim-audio-player" class="bg-emerald-50/80 border border-emerald-200/70 p-2.5 rounded-xl flex items-center justify-between mt-1.5 text-[11px] shadow-2xs">
+                  <div class="flex items-center gap-2.5 flex-1 min-w-0 pr-2">
+                    <button id="sim-audio-play-btn" onclick="window.app.toggleAudioBriefing()" class="w-7 h-7 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white flex items-center justify-center shrink-0 shadow-xs transition active:scale-95" title="Play Voice Memo">
+                      <i id="sim-audio-play-icon" data-lucide="play" class="w-3.5 h-3.5 fill-current ml-0.5"></i>
+                    </button>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center justify-between mb-1">
+                        <span class="text-[10px] text-emerald-950 font-bold truncate">Caregiver Voice Briefing</span>
+                        <span id="sim-audio-timer" class="font-mono text-[10px] text-emerald-800 font-semibold shrink-0">0:00 / 0:34</span>
+                      </div>
+                      <div class="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
+                        <div id="sim-audio-bar" class="bg-emerald-600 h-full w-0 transition-all duration-300"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="sim-audio-waves" class="flex items-center gap-1 shrink-0 h-4 px-1">
+                    <span class="audio-wave-bar"></span>
+                    <span class="audio-wave-bar"></span>
+                    <span class="audio-wave-bar"></span>
+                    <span class="audio-wave-bar"></span>
+                    <span class="audio-wave-bar"></span>
+                    <span class="audio-wave-bar"></span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Simple Transparent Plans & Pricing -->
+  <section id="pricing" class="py-12 sm:py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12 space-y-3">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full">CARE PLANS</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">Simple, Transparent Pricing</h2>
+        <p class="text-xs sm:text-sm lg:text-base text-stone-600">
+          Choose ongoing peace of mind. Every visit is verified and reported with photo proof.
+        </p>
+
+        <!-- Monthly vs Annual Toggle -->
+        <div class="pt-3 sm:pt-4 flex items-center justify-center space-x-3 sm:space-x-4">
+          <span class="text-xs sm:text-sm font-semibold text-stone-700">Monthly Billing</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="billing-toggle" class="sr-only peer">
+            <div class="w-13 sm:w-14 h-7 bg-stone-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[4px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-800"></div>
+          </label>
+          <span class="text-xs sm:text-sm font-semibold text-stone-900 flex items-center gap-1.5">
+            <span>Annual Plan</span>
+            <span class="bg-amber-100 text-amber-900 text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-bold">Save 17%</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Dynamic Plans Grid (Rendered by JS) -->
+      <div id="plans-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Interactive Comparison Button -->
+      <div class="mt-8 text-center">
+        <button onclick="window.app.openPlanComparisonModal()" class="px-5 py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-300 text-stone-800 text-xs sm:text-sm font-bold inline-flex items-center gap-2 shadow-xs transition active:scale-95">
+          <i data-lucide="table" class="w-4 h-4 text-emerald-800"></i>
+          <span>Compare All 4 Care Plans Side-by-Side</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-stone-500"></i>
+        </button>
+      </div>
+
+      <div class="mt-4 text-center text-[11px] sm:text-xs text-stone-500">
+        * Indicative pricing for Hyderabad. Final plans are confirmed after our free home audit and can be tailored to your family's exact needs.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Plan Cost Estimator (With 3 Quick Presets) -->
+  <section id="calculator" class="py-12 sm:py-16 lg:py-24 bg-brand-sand/60 border-t border-stone-200">
+    <div class="max-w-5xl 2xl:max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-8 sm:mb-10 space-y-2">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-white px-3 py-1 rounded-full shadow-xs">CUSTOMIZE YOUR CARE</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">Interactive Cost Estimator</h2>
+        <p class="text-xs sm:text-sm text-stone-600 max-w-xl mx-auto">
+          Select a quick preset or adjust the sliders below to calculate an instant cost estimate.
+        </p>
+
+        <!-- 3 Quick Presets -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-3">
+          <button onclick="window.app.setCalculatorPreset('elder')" data-preset="elder" class="calc-preset-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-stone-200 shadow-xs hover:border-brand-mid transition">
+            👵 Elder Care Only
+          </button>
+          <button onclick="window.app.setCalculatorPreset('property')" data-preset="property" class="calc-preset-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-stone-200 shadow-xs hover:border-brand-mid transition">
+            🏡 Vacant Plot Watch
+          </button>
+          <button onclick="window.app.setCalculatorPreset('combo')" data-preset="combo" class="calc-preset-btn px-3.5 sm:px-4 py-2 rounded-xl text-xs font-semibold bg-white border border-stone-200 shadow-xs hover:border-brand-mid transition">
+            🌟 Complete Family Package
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-stone-200 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        
+        <!-- Controls (7 cols) -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 flex flex-col justify-between">
+          
+          <!-- Slider 1: Elder Care Visits -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs sm:text-sm font-bold text-stone-900 flex items-center gap-2">
+                <i data-lucide="user-check" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+                <span>Elder Wellness Visits</span>
+              </label>
+              <span id="calc-elder-val" class="text-[11px] sm:text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg">2 visits / month</span>
+            </div>
+            <input type="range" id="calc-elder" min="0" max="8" step="2" value="2">
+            <div class="flex justify-between text-[10px] sm:text-[11px] text-stone-400 mt-1">
+              <span>None</span>
+              <span>2/mo (Bi-weekly)</span>
+              <span>4/mo (Weekly)</span>
+              <span>8/mo (Twice a week)</span>
+            </div>
+          </div>
+
+          <!-- Select 2: Property Inspection -->
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-stone-900 mb-2 flex items-center gap-2">
+              <i data-lucide="home" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+              <span>Property & Land Physical Audits</span>
+            </label>
+            <select id="calc-property" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-medium text-stone-800 outline-none focus:border-brand-mid">
+              <option value="none">No property inspection required</option>
+              <option value="monthly" selected>Monthly Inspection with 4K Video Walkthrough & Geo-Tag</option>
+              <option value="biweekly">Bi-Weekly Inspection (Recommended for Vacant Open Plots)</option>
+            </select>
+          </div>
+
+          <!-- Slider 3: Local Errands & Paperwork -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs sm:text-sm font-bold text-stone-900 flex items-center gap-2">
+                <i data-lucide="package" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+                <span>Local Errands / Government Tasks</span>
+              </label>
+              <span id="calc-errands-val" class="text-[11px] sm:text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg">1 errand(s) / mo</span>
+            </div>
+            <input type="range" id="calc-errands" min="0" max="5" step="1" value="1">
+            <div class="flex justify-between text-[10px] sm:text-[11px] text-stone-400 mt-1">
+              <span>0 (None)</span>
+              <span>1 errand</span>
+              <span>3 errands</span>
+              <span>5 errands</span>
+            </div>
+          </div>
+
+          <!-- Slider 4: Medical Hospital Escort -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs sm:text-sm font-bold text-stone-900 flex items-center gap-2">
+                <i data-lucide="heart" class="w-4 h-4 text-emerald-700 shrink-0"></i>
+                <span>Escorted Hospital / Doctor Visits</span>
+              </label>
+              <span id="calc-medical-val" class="text-[11px] sm:text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg">As needed</span>
+            </div>
+            <input type="range" id="calc-medical" min="0" max="3" step="1" value="0">
+            <div class="flex justify-between text-[10px] sm:text-[11px] text-stone-400 mt-1">
+              <span>As needed (0)</span>
+              <span>1 escort / mo</span>
+              <span>2 escorts / mo</span>
+              <span>3 escorts / mo</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary & Estimate Card (5 cols) -->
+        <div class="lg:col-span-5 bg-brand-deep rounded-2xl p-6 sm:p-7 text-white flex flex-col justify-between shadow-lg h-full">
+          <div>
+            <span class="text-xs uppercase tracking-wider text-brand-gold font-bold">Estimated Cost</span>
+            <div class="mt-2 flex items-baseline gap-2">
+              <span id="calc-total-monthly" class="font-serif text-3xl sm:text-4xl font-extrabold text-amber-200">₹8,198</span>
+              <span class="text-xs text-stone-400">/ month</span>
+            </div>
+            <div class="mt-1 text-xs text-stone-300">
+              Annual equivalent: <span id="calc-total-annual" class="font-semibold text-emerald-300">₹81,652 / yr</span>
+            </div>
+
+            <div class="my-5 border-t border-brand-mid pt-4 space-y-2 text-xs text-stone-300">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Includes dedicated Relationship Manager</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Geo-tagged WhatsApp updates after every task</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Free in-person home audit prior to payment</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="calc-lock-in-btn" class="w-full py-3.5 px-4 bg-gradient-to-r from-brand-gold to-amber-600 hover:from-amber-400 hover:to-brand-gold text-stone-950 font-bold rounded-xl text-xs sm:text-sm shadow-md transition flex items-center justify-center gap-2">
+            <span>Book Audit for this Custom Plan</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hyderabad Neighborhood Coverage -->
+  <section id="coverage" class="py-12 sm:py-16 lg:py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left: Search & Description (5 cols) -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5">
+          <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full">COVERAGE AREA</span>
+          <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">
+            Hyderabad Neighborhood Coverage
+          </h2>
+          <p class="text-xs sm:text-sm lg:text-base text-stone-600 leading-relaxed">
+            Our certified field supervisors and caregivers are stationed directly across key residential hubs in Hyderabad and Secunderabad to ensure swift turnaround times.
+          </p>
+
+          <!-- Search Input -->
+          <div class="relative">
+            <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="text" id="locality-search" placeholder="Search your neighborhood (e.g. Banjara Hills, Tellapur...)" class="w-full bg-stone-50 border border-stone-200 rounded-xl pl-10 pr-4 py-2.5 sm:py-3 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white transition" />
+          </div>
+
+          <p class="text-[11px] sm:text-xs text-stone-500">
+            Have property or family beyond GHMC limits? We also support Sangareddy, Shamshabad, and Yadagirigutta on request.
+          </p>
+        </div>
+
+        <!-- Right: Localities Grid (7 cols) -->
+        <div class="lg:col-span-7 mt-4 lg:mt-0">
+          <div id="localities-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client Testimonials & Stories -->
+  <section class="py-12 sm:py-16 lg:py-24 bg-brand-deep text-white">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-2">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-gold bg-white/10 px-3 py-1 rounded-full">REAL FEEDBACK</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Trusted by Families Worldwide</h2>
+        <p class="text-xs sm:text-sm lg:text-base text-stone-300">
+          Hear how NRI professionals manage their responsibilities in Hyderabad with total peace of mind.
+        </p>
+      </div>
+
+      <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Searchable FAQs Accordion -->
+  <section id="faqs" class="py-12 sm:py-16 lg:py-24 bg-brand-sand/50">
+    <div class="max-w-4xl 2xl:max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-8 sm:mb-12 space-y-3">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-white px-3 py-1 rounded-full shadow-xs">COMMON QUESTIONS</span>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark">Frequently Asked Questions</h2>
+        <p class="text-xs sm:text-sm lg:text-base text-stone-600">
+          Everything you need to know about our vetting procedures, geo-tag proof, milestone payments, and hospital escorts.
+        </p>
+
+        <!-- Search FAQ input -->
+        <div class="pt-3 sm:pt-4 max-w-md mx-auto relative">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="faq-search" placeholder="Search questions (e.g. vetting, Apollo, billing...)" class="w-full bg-white border border-stone-200 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm outline-none focus:border-brand-mid shadow-xs" />
+        </div>
+      </div>
+
+      <div id="faqs-container" class="space-y-3">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Free Home Audit Booking Form -->
+  <section class="py-12 sm:py-16 lg:py-24 bg-white border-t border-stone-200">
+    <div class="max-w-5xl 2xl:max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-brand-cream rounded-3xl p-6 sm:p-10 lg:p-12 border border-stone-200 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        
+        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold tracking-widest uppercase text-emerald-800 bg-white px-3 py-1 rounded-full shadow-xs">START HERE</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mt-3">How Can We Help Your Family in Hyderabad?</h2>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mt-2">
+              Tell us about your parents, your property, or the specific errands you need managed. We’ll arrange a complimentary on-site audit in Hyderabad.
+            </p>
+          </div>
+
+          <div class="space-y-2.5 pt-4 text-xs text-stone-700">
+            <div class="flex items-center justify-between gap-2.5 p-2 bg-white/70 rounded-xl border border-stone-200/60 shadow-2xs">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-emerald-800"></i>
+                </div>
+                <div class="min-w-0">
+                  <span class="font-bold block text-[11px] text-stone-500">Hyderabad Concierge:</span>
+                  <a href="tel:+919100084729" class="app-phone-text text-emerald-900 hover:underline font-bold text-xs truncate block">+91 91000 84729</a>
+                </div>
+              </div>
+              <button onclick="window.app.copyText('+91 91000 84729', 'Phone number')" class="copy-pill-btn px-2.5 py-1 text-[10px] bg-stone-100 hover:bg-emerald-50 text-stone-700 hover:text-emerald-900 rounded-lg border border-stone-200 font-semibold shrink-0 flex items-center gap-1" title="Copy Phone Number">
+                <i data-lucide="copy" class="w-3 h-3"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between gap-2.5 p-2 bg-white/70 rounded-xl border border-stone-200/60 shadow-2xs">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center shrink-0">
+                  <i data-lucide="mail" class="w-4 h-4 text-emerald-800"></i>
+                </div>
+                <div class="min-w-0">
+                  <span class="font-bold block text-[11px] text-stone-500">Inquiries:</span>
+                  <a href="mailto:hello@anchorroots.co.in" class="app-email-link text-emerald-900 hover:underline font-semibold text-xs truncate block">hello@anchorroots.co.in</a>
+                </div>
+              </div>
+              <button onclick="window.app.copyText('hello@anchorroots.co.in', 'Email address')" class="copy-pill-btn px-2.5 py-1 text-[10px] bg-stone-100 hover:bg-emerald-50 text-stone-700 hover:text-emerald-900 rounded-lg border border-stone-200 font-semibold shrink-0 flex items-center gap-1" title="Copy Email">
+                <i data-lucide="copy" class="w-3 h-3"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2.5 p-2 bg-white/70 rounded-xl border border-stone-200/60 shadow-2xs">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-800"></i>
+              </div>
+              <div>
+                <span class="font-bold block text-[11px] text-stone-500">Office Address:</span>
+                <span class="app-address-text text-stone-600 font-medium text-xs">Road No. 36, Jubilee Hills, Hyderabad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="quick-contact-form" class="space-y-4 bg-white p-6 sm:p-7 rounded-2xl border border-stone-200 shadow-xs text-xs sm:text-sm flex flex-col justify-between h-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-stone-700 font-semibold mb-1.5">Your Name *</label>
+                <input type="text" name="name" required placeholder="e.g. Anand Sharma" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+              </div>
+              <div>
+                <label class="block text-stone-700 font-semibold mb-1.5">WhatsApp / Phone *</label>
+                <input type="tel" name="phone" required placeholder="+1 (408) 555-0192" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-stone-700 font-semibold mb-1.5">Email Address *</label>
+              <input type="email" name="email" required placeholder="anand@example.com" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+            </div>
+
+            <div>
+              <label class="block text-stone-700 font-semibold mb-1.5">How can we help your family in Hyderabad?</label>
+              <textarea name="message" rows="3" placeholder="Tell us about parent health conditions or property location..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-3 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full h-12 px-4 bg-brand-deep hover:bg-brand-mid text-amber-200 hover:text-white font-bold rounded-xl transition shadow-md flex items-center justify-center gap-2">
+              <span>Send In-Person Audit Request</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clean Footer -->
+  <footer class="bg-brand-dark text-stone-400 text-xs sm:text-sm pt-12 sm:pt-16 pb-10 sm:pb-12 border-t border-brand-forest">
+    <div class="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 pb-10 sm:pb-12 border-b border-stone-800">
+        
+        <!-- Brand summary (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <img src="assets/images/logo.jpeg" alt="Anchor & Roots" class="w-10 h-10 rounded-lg border border-brand-gold/40">
+            <div>
+              <span class="font-serif text-xl font-bold text-white block">Anchor & Roots</span>
+              <span class="text-[11px] text-brand-gold font-sans block">Rooted in trust. Anchored in care.</span>
+            </div>
+          </div>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+            Hyderabad’s dedicated on-ground caretaking and concierge service for Non-Resident Indian (NRI) families. Accountable stewardship with photo & video proof.
+          </p>
+          <div class="text-[11px] text-stone-500">
+            Serving Hyderabad & Secunderabad, Telangana, India
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-amber-300 transition">Elder Care & Wellness</a></li>
+            <li><a href="#services" class="hover:text-amber-300 transition">Property & Land Watch</a></li>
+            <li><a href="#services" class="hover:text-amber-300 transition">Shipping & Errands</a></li>
+            <li><a href="#services" class="hover:text-amber-300 transition">Medical Coordination</a></li>
+            <li><a href="#services" class="hover:text-amber-300 transition">Personalized Travel</a></li>
+          </ul>
+        </div>
+
+        <!-- Areas Covered -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Localities</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#coverage" class="hover:text-amber-300 transition">Banjara Hills & Jubilee Hills</a></li>
+            <li><a href="#coverage" class="hover:text-amber-300 transition">Gachibowli & Madhapur</a></li>
+            <li><a href="#coverage" class="hover:text-amber-300 transition">Tellapur & Kokapet</a></li>
+            <li><a href="#coverage" class="hover:text-amber-300 transition">Kondapur & Financial District</a></li>
+            <li><a href="#coverage" class="hover:text-amber-300 transition">Secunderabad & Begumpet</a></li>
+          </ul>
+        </div>
+
+        <!-- Admin Studio Portal -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Owner Portal</h4>
+          <p class="text-xs text-stone-400">
+            Add services, update pricing, announce notices, or download customer inquiries.
+          </p>
+          <button onclick="window.adminManager.open()" class="px-3.5 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-300 text-xs font-semibold border border-amber-500/30 flex items-center gap-2 transition">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>CMS & Admin Studio</span>
+          </button>
+          <p class="text-[10px] text-stone-500">Shortcut: <code>Ctrl+Shift+A</code> (PIN: <code>anchor2026</code>)</p>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Disclaimer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>© 2026 Anchor & Roots. All rights reserved. Services are coordinated through vetted local partners; Anchor & Roots is not a medical hospital. Plans shown are indicative.</p>
+        <div class="flex items-center space-x-4 shrink-0">
+          <a href="#" class="hover:text-stone-300">Privacy Policy</a>
+          <span>·</span>
+          <a href="#" class="hover:text-stone-300">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Concierge WhatsApp Action Button -->
+  <div class="floating-concierge">
+    <a href="https://wa.me/919100084729?text=Hello%20Anchor%20%26%20Roots%2C%20I%20am%20an%20NRI%20inquiring%20about%20care%20support%20for%20my%20family%20in%20Hyderabad." target="_blank" class="px-4 py-3 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-2xl flex items-center gap-2 border border-emerald-400/30 transition">
+      <i data-lucide="message-circle" class="w-4 h-4 text-white"></i>
+      <span class="hidden sm:inline">WhatsApp Care Desk</span>
+    </a>
+  </div>
+
+  <!-- Service Detail Scope Modal -->
+  <div id="service-detail-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm app-modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-stone-100 overflow-hidden relative" onclick="event.stopPropagation()">
+      <div class="relative h-44 sm:h-56 bg-stone-100">
+        <img id="modal-svc-image" src="" alt="Service" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <button onclick="document.getElementById('service-detail-modal').classList.add('hidden'); document.body.style.overflow='';" class="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/75 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <div class="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between text-white">
+          <div>
+            <span id="modal-svc-badge" class="px-2.5 py-0.5 rounded-full bg-amber-400 text-stone-950 font-bold text-xs">Badge</span>
+            <h3 id="modal-svc-title" class="font-serif text-xl sm:text-2xl font-bold mt-1">Title</h3>
+          </div>
+          <span id="modal-svc-price" class="text-xs sm:text-sm font-bold text-amber-200">Price</span>
+        </div>
+      </div>
+
+      <div class="p-5 sm:p-8 space-y-4 sm:space-y-5">
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Service Scope & Overview</h4>
+          <p id="modal-svc-desc" class="text-stone-700 text-xs sm:text-sm leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">What We Manage For You:</h4>
+          <ul id="modal-svc-features" class="space-y-2 text-xs sm:text-sm"></ul>
+        </div>
+
+        <!-- Sample Field Report Preview -->
+        <div id="modal-svc-sample" class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-xs space-y-1.5">
+          <div class="flex items-center gap-1.5 font-bold text-emerald-900">
+            <i data-lucide="file-check" class="w-4 h-4 text-emerald-700"></i>
+            <span id="sample-title">Sample Field Update</span>
+          </div>
+          <p id="sample-tasks" class="text-stone-700"></p>
+          <p id="sample-note" class="text-stone-500 italic"></p>
+        </div>
+
+        <div class="flex items-center justify-end space-x-3 pt-3 border-t border-stone-100">
+          <button onclick="document.getElementById('service-detail-modal').classList.add('hidden'); document.body.style.overflow='';" class="px-4 py-2.5 rounded-xl text-stone-600 hover:bg-stone-100 font-semibold text-xs sm:text-sm transition">
+            Close
+          </button>
+          <button id="modal-svc-cta" class="px-5 sm:px-6 py-2.5 rounded-xl bg-brand-deep hover:bg-brand-mid text-amber-200 font-bold text-xs sm:text-sm transition shadow-md">
+            Schedule Free Audit for this Service
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Free Home & Care Audit Booking Modal -->
+  <div id="audit-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm app-modal-backdrop">
+    <div id="audit-modal-body" class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-stone-100 relative max-h-[92vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between pb-4 border-b border-stone-100 mb-4">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">NO OBLIGATION</span>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mt-1">Book a Free Home & Care Audit</h3>
+        </div>
+        <button onclick="window.app.closeAuditModal()" class="text-stone-400 hover:text-stone-800 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="audit-booking-form" class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block text-stone-700 font-semibold mb-1.5">Your Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Anand Sharma" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1.5">WhatsApp / Phone *</label>
+            <input type="tel" name="phone" required placeholder="+1 (408) 555-0192" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+          </div>
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1.5">Email Address *</label>
+            <input type="email" name="email" required placeholder="anand@example.com" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1.5">Locality in Hyderabad *</label>
+            <input type="text" name="locality" required placeholder="e.g. Banjara Hills, Tellapur" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white" />
+          </div>
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1.5">Service Required</label>
+            <select id="audit-service-select" name="service" class="w-full h-11 bg-stone-50 border border-stone-200 rounded-xl px-3 text-xs sm:text-sm outline-none focus:border-brand-mid font-medium">
+              <option value="Elder Care & Companionship">Elder Care & Companionship</option>
+              <option value="Property & Land Watch">Property & Land Watch</option>
+              <option value="Shipping, Legal & Local Errands">Shipping, Legal & Local Errands</option>
+              <option value="Medical Coordination & Hospital Escort">Medical Coordination & Hospital Escort</option>
+              <option value="Personalized Travel Concierge">Personalized Travel Concierge</option>
+              <option value="Renovations, Repairs & Family Events">Renovations, Repairs & Family Events</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-stone-700 font-semibold mb-1.5">Family or Property Details</label>
+          <textarea name="message" rows="2" placeholder="Tell us about parent health conditions or property type..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm outline-none focus:border-brand-mid focus:bg-white resize-none"></textarea>
+        </div>
+
+        <p class="text-[11px] text-stone-500">
+          🔒 Your contact details are kept strictly confidential. Our Relationship Director will reach out within 12 hours.
+        </p>
+
+        <button type="submit" class="w-full h-12 px-4 bg-brand-deep hover:bg-brand-mid text-amber-200 hover:text-white font-bold rounded-xl transition shadow-md flex items-center justify-center gap-2">
+          <span>Confirm Free Audit Booking</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Side-by-Side Plan Comparison Matrix Modal -->
+  <div id="plan-comparison-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm app-modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-stone-100 overflow-hidden relative" onclick="event.stopPropagation()">
+      <div class="px-6 py-4 border-b border-stone-200 flex items-center justify-between bg-brand-sand/40">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">DETAILED BREAKDOWN</span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-dark mt-0.5">Care Plan Comparison Matrix</h3>
+        </div>
+        <button onclick="document.getElementById('plan-comparison-modal').classList.add('hidden'); document.body.style.overflow='';" class="text-stone-400 hover:text-stone-800 p-1.5 rounded-lg hover:bg-stone-100 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 text-xs sm:text-sm">
+        <div id="plan-comparison-table-container" class="overflow-x-auto">
+          <!-- Rendered dynamically by app.js based on current currency -->
+        </div>
+      </div>
+
+      <div class="px-6 py-3.5 bg-stone-50 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-600">
+        <span>* All plans can be custom-tailored following the initial free home audit.</span>
+        <button onclick="document.getElementById('plan-comparison-modal').classList.add('hidden'); document.body.style.overflow='';" class="w-full sm:w-auto px-5 py-2 rounded-xl bg-brand-deep hover:bg-brand-mid text-amber-200 font-bold transition">
+          Close Matrix
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
